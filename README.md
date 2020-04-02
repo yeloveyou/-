@@ -11,7 +11,7 @@
 
 #### 安装教程
 
-1.  xxxxqqqq
+1.  xxxxa
 2.  xxxx
 3.  xxxx
 
