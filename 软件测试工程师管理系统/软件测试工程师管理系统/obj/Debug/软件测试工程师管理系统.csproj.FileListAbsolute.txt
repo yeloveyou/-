@@ -7,8 +7,11 @@ G:\学习\软件工程\TestGit\软件测试工程师管理系统\软件测试工
 G:\学习\软件工程\TestGit\软件测试工程师管理系统\软件测试工程师管理系统\obj\Debug\软件测试工程师管理系统.csproj.CoreCompileInputs.cache
 G:\学习\软件工程\TestGit\软件测试工程师管理系统\软件测试工程师管理系统\obj\Debug\软件测试工程师管理系统.exe
 G:\学习\软件工程\TestGit\软件测试工程师管理系统\软件测试工程师管理系统\obj\Debug\软件测试工程师管理系统.pdb
-G:\学习\软件工程\TestGit\软件测试工程师管理系统\软件测试工程师管理系统\obj\Debug\软件测试工程师管理系统.登录界面.resources
 G:\学习\软件工程\TestGit\软件测试工程师管理系统\软件测试工程师管理系统\obj\Debug\软件测试工程师管理系统.员工资料补充.resources
 G:\学习\软件工程\TestGit\软件测试工程师管理系统\软件测试工程师管理系统\obj\Debug\软件测试工程师管理系统.员工界面.resources
 G:\学习\软件工程\TestGit\软件测试工程师管理系统\软件测试工程师管理系统\obj\Debug\软件测试工程师管理系统.员工资料.resources
 G:\学习\软件工程\TestGit\软件测试工程师管理系统\软件测试工程师管理系统\obj\Debug\软件测试工程师管理系统.工资界面.resources
+G:\学习\软件工程\TestGit\软件测试工程师管理系统\软件测试工程师管理系统\obj\Debug\软件测试工程师管理系统.管理员界面.resources
+G:\学习\软件工程\TestGit\软件测试工程师管理系统\软件测试工程师管理系统\obj\Debug\软件测试工程师管理系统.增加账号.resources
+G:\学习\软件工程\TestGit\软件测试工程师管理系统\软件测试工程师管理系统\obj\Debug\软件测试工程师管理系统.所有员工资料.resources
+G:\学习\软件工程\TestGit\软件测试工程师管理系统\软件测试工程师管理系统\obj\Debug\软件测试工程师管理系统.登录界面.resources

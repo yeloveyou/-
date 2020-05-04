@@ -11,47 +11,47 @@ using System.Data.SqlClient;
 
 namespace 软件测试工程师管理系统
 {
-    public partial class 员工界面 : Form
+    public partial class 管理员界面 : Form
     {
+
         SqlConnection sconn = new SqlConnection();
         SqlCommand scomm = new SqlCommand();
         SqlCommand scommtimes = new SqlCommand();
         SqlDataAdapter sda = new SqlDataAdapter();
         SqlDataReader sdreader;
         DataSet ds = new DataSet();
-       // string SConStr = "server=localhost\\SQLEXPRESS;database=EMS;uid=sa;pwd=980420";
+        //string SConStr = "server=localhost\\SQLEXPRESS;database=EMS;uid=sa;pwd=980420";
 
-        public 员工界面()
+        public 管理员界面()
         {
             InitializeComponent();
         }
-        public 员工界面(string worknumber,string name)
+        public 管理员界面(string admin)
         {
             InitializeComponent();
-            textBox1.Text = worknumber;
-            textBox2.Text = name;
+            tbname.Text = admin;
         }
-        private void 员工界面_FormClosed(object sender, FormClosedEventArgs e)
+
+        private void 管理员界面_FormClosed(object sender, FormClosedEventArgs e)
         {
             System.Environment.Exit(0);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void 管理员界面_Load(object sender, EventArgs e)
         {
-            new 工资界面(textBox1.Text).Show();
+
+        }
+
+        private void btadd_Click(object sender, EventArgs e)
+        {
+            new 增加账号(tbname.Text).Show();
             this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            new 员工资料(textBox1.Text).Show();
+            new 所有员工资料(tbname.Text).Show();
             this.Hide();
-        }
-
-        private void 员工界面_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

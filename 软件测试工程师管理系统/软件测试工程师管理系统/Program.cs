@@ -8,15 +8,18 @@ namespace 软件测试工程师管理系统
 {
     static class Program
     {
+        
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>
         [STAThread]
         static void Main()
         {
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new 登录界面());
         }
+        
     }
 }

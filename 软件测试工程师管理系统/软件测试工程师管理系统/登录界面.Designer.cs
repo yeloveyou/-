@@ -117,9 +117,9 @@
         private System.Windows.Forms.Label lbUserName;
         private System.Windows.Forms.Label laPawssWords;
         private System.Windows.Forms.Button btLogin;
-        private System.Windows.Forms.TextBox tbUserName;
         private System.Windows.Forms.TextBox tbPassWords;
         private System.Windows.Forms.CheckBox checkBox1;
+        public System.Windows.Forms.TextBox tbUserName;
     }
 }
 
