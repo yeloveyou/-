@@ -53,5 +53,16 @@ namespace 软件测试工程师管理系统
             new 所有员工资料(tbname.Text).Show();
             this.Hide();
         }
+
+        private void btdelete_Click(object sender, EventArgs e)
+        {
+            new 删除员工(tbname.Text).Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new 修改密码(tbname.Text).Show();
+            this.Hide();
+        }
     }
 }

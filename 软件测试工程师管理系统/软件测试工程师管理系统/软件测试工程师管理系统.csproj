@@ -47,6 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SConnStr.cs" />
+    <Compile Include="修改密码.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="修改密码.Designer.cs">
+      <DependentUpon>修改密码.cs</DependentUpon>
+    </Compile>
+    <Compile Include="删除员工.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="删除员工.Designer.cs">
+      <DependentUpon>删除员工.cs</DependentUpon>
+    </Compile>
     <Compile Include="员工界面.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +109,12 @@
     <Compile Include="管理员界面.Designer.cs">
       <DependentUpon>管理员界面.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="修改密码.resx">
+      <DependentUpon>修改密码.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="删除员工.resx">
+      <DependentUpon>删除员工.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="员工界面.resx">
       <DependentUpon>员工界面.cs</DependentUpon>
     </EmbeddedResource>
