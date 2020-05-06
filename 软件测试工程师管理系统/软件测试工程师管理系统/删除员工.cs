@@ -57,17 +57,7 @@ namespace 软件测试工程师管理系统
 
         private void dgv用户_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //当前的行中的第几列 
-            tbnumber.Text = dgv用户.CurrentRow.Cells[0].Value.ToString();
-            tbname.Text = dgv用户.CurrentRow.Cells[1].Value.ToString();
-            tbsex.Text = dgv用户.CurrentRow.Cells[2].Value.ToString();
-            tbbirthday.Text = dgv用户.CurrentRow.Cells[3].Value.ToString().Substring(0, dgv用户.CurrentRow.Cells[3].Value.ToString().Length - 8);
-            tblocol.Text = dgv用户.CurrentRow.Cells[4].Value.ToString();
-            tbdegree.Text = dgv用户.CurrentRow.Cells[5].Value.ToString();
-            tbadress.Text = dgv用户.CurrentRow.Cells[6].Value.ToString();
-            tbphone.Text = dgv用户.CurrentRow.Cells[7].Value.ToString();
-            tbworkage.Text = dgv用户.CurrentRow.Cells[8].Value.ToString();
-            tbsalary.Text = dgv用户.CurrentRow.Cells[9].Value.ToString();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -107,6 +97,21 @@ namespace 软件测试工程师管理系统
 
                 sconn.Close();
             }
+        }
+
+        private void dgv用户_MouseClick(object sender, MouseEventArgs e)
+        {
+            //当前的行中的第几列 
+            tbnumber.Text = dgv用户.CurrentRow.Cells[0].Value.ToString();
+            tbname.Text = dgv用户.CurrentRow.Cells[1].Value.ToString();
+            tbsex.Text = dgv用户.CurrentRow.Cells[2].Value.ToString();
+            tbbirthday.Text = dgv用户.CurrentRow.Cells[3].Value.ToString().Substring(0, dgv用户.CurrentRow.Cells[3].Value.ToString().Length - 8);
+            tblocol.Text = dgv用户.CurrentRow.Cells[4].Value.ToString();
+            tbdegree.Text = dgv用户.CurrentRow.Cells[5].Value.ToString();
+            tbadress.Text = dgv用户.CurrentRow.Cells[6].Value.ToString();
+            tbphone.Text = dgv用户.CurrentRow.Cells[7].Value.ToString();
+            tbworkage.Text = dgv用户.CurrentRow.Cells[8].Value.ToString();
+            tbsalary.Text = dgv用户.CurrentRow.Cells[9].Value.ToString();
         }
     }
 }

@@ -6,15 +6,17 @@ git commit -m"xxx"
 
 git push
 
+git push https://github.com/yeloveyou/TestGit.git  //提交某一个远程库
+
 git remote add origin git@github.com:yeloveyou/TestGit.git
 
 git remote add gitee git@gitee.com:yeshuoxihuanni/XX.git
 
 git push -u gitee
 
-git remote rm gitee
+git remote rm gitee//删除远程库
 
-git remote -v
+git remote -v			//查看远程库
 
 git push gitee或origin master
 

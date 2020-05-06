@@ -52,6 +52,17 @@ namespace 软件测试工程师管理系统
 
         private void dgv用户_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+          
+        }
+
+        private void 所有员工资料_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            new 管理员界面(textBox1.Text).Show();
+            this.Hide();
+        }
+
+        private void dgv用户_MouseClick(object sender, MouseEventArgs e)
+        {
             //当前的行中的第几列 
             tbnumber.Text = dgv用户.CurrentRow.Cells[0].Value.ToString();
             tbname.Text = dgv用户.CurrentRow.Cells[1].Value.ToString();
@@ -63,12 +74,6 @@ namespace 软件测试工程师管理系统
             tbphone.Text = dgv用户.CurrentRow.Cells[7].Value.ToString();
             tbworkage.Text = dgv用户.CurrentRow.Cells[8].Value.ToString();
             tbsalary.Text = dgv用户.CurrentRow.Cells[9].Value.ToString();
-        }
-
-        private void 所有员工资料_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            new 管理员界面(textBox1.Text).Show();
-            this.Hide();
         }
     }
 }
