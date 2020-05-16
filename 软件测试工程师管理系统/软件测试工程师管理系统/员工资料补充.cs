@@ -35,8 +35,14 @@ namespace 软件测试工程师管理系统
             System.Environment.Exit(0);
         }
 
-        string username,name, sex, birthday, local, degree, adress, phone, workage, salary;
+        string username,name, sex, local, degree, adress, phone, workage, salary;
 
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            tbbirthday.Text = dateTimePicker1.Value.ToLongDateString();
+        }
+
+        DateTime birthday;
         private void 员工资料补充_Load(object sender, EventArgs e)
         {
             
@@ -51,7 +57,7 @@ namespace 软件测试工程师管理系统
         {  
             name = tbname.Text;        
             sex = tbsex.Text;
-            birthday = tbbirthday.Text;
+            birthday = dateTimePicker1.Value.Date;
             local = tblocol.Text;
             degree = tbdegree.Text;
             adress = tbadress.Text;
@@ -60,23 +66,33 @@ namespace 软件测试工程师管理系统
             
 
         }
-        bool issexok, isdegreeok;
+        bool issexok, isdegreeok, isphoneok;
         public void panduan()
         {
             getDate();
+            //判断性别输入
             if (string.Equals(sex, "男") || string.Equals(sex, "女"))
             {
                 issexok = true;
             }
             else
-                issexok = false ;
+                issexok = false;
 
-            if (string.Equals(degree, "本科") || string.Equals(degree, "小学") || string.Equals(degree, "中学") || string.Equals(degree, "其他"))
+            //判断学历输入
+            if (string.Equals(degree, "本科") || string.Equals(degree, "小学") || string.Equals(degree, "中学") || string.Equals(degree, "专科") || string.Equals(degree, "硕士") || string.Equals(degree, "博士") || string.Equals(degree, "其他"))
             {
                 isdegreeok = true;
             }
             else
                 isdegreeok = false;
+
+            //判断电话号码输入
+            if (phone.Length == 11 && (phone.Substring(0, 3) == "173" || phone.Substring(0, 3) == "150" || phone.Substring(0, 3) == "137"))
+            {
+                isphoneok = true;
+            }
+            else
+                isphoneok = false;
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -89,7 +105,7 @@ namespace 软件测试工程师管理系统
 
                 //输入的条件判断
                 panduan();
-                if (isdegreeok && issexok)
+                if (isdegreeok && issexok&&isphoneok)
                 {
                     scomm.CommandText = string.Format("update msg set msg_name='{0}',msg_sex='{1}',msg_birth='{2}',msg_native='{3}'," +
                       "msg_edu='{4}',msg_add='{5}',msg_tel='{6}',msg_year='{7}' where msg_num='{8}'", name, sex, birthday, local, degree, adress, phone, workage, tbnumber.Text);
@@ -98,15 +114,21 @@ namespace 软件测试工程师管理系统
                     new 员工界面(tbnumber.Text, tbname.Text).Show();
                     this.Hide();
                 }
-                else if(!isdegreeok)
+                else if (!isdegreeok)
                 {
-                    MessageBox.Show("请输入正确的学位如“本科”“小学”“中学”“其他”");
+                    MessageBox.Show("请输入正确的学位如“本科”“小学”“中学”“专科”“硕士”“博士”“其他”");
                     new 员工资料补充(tbnumber.Text).Show();
                     this.Hide();
                 }
                 else if (!issexok)
                 {
                     MessageBox.Show("请输入性别“男”或者“女”");                   
+                    new 员工资料补充(tbnumber.Text).Show();
+                    this.Hide();
+                }
+                else if (!isphoneok)
+                {
+                    MessageBox.Show("请输入正确的手机号码！");
                     new 员工资料补充(tbnumber.Text).Show();
                     this.Hide();
                 }

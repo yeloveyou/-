@@ -66,7 +66,7 @@ namespace 软件测试工程师管理系统
                     string DBpassword = sdreader.GetString(sdreader.GetOrdinal("acnt_pwd"));
                     int ACnttimes = sdreader.GetInt32(sdreader.GetOrdinal("acnt_times"));
 
-                    //第一次登录
+                    //用户第一次登录
                     if (password.Trim()==DBpassword.Trim()&&ACnttimes==0)//trim去除空格
                     {
                         sconn.Close();
@@ -78,12 +78,12 @@ namespace 软件测试工程师管理系统
                         scommtimes.Connection = sconn;
                         scommtimes.ExecuteNonQuery();
                         sconn.Close();
-                    }
-                    else if(password.Trim() != DBpassword.Trim() && ACnttimes == 0)
+                    }//用户密码输入错误
+                    else if(password.Trim() != DBpassword.Trim())
                     {
                         MessageBox.Show("请输入正确的密码");
                     }
-                    //老用户
+                    //用户是老用户
                     else if((password.Trim() == DBpassword.Trim() && ACnttimes != 0))
                     {
                         sconn.Close();
@@ -102,7 +102,7 @@ namespace 软件测试工程师管理系统
                     }
                 }
                 else
-                {
+                {   //管理员登录
                     if (string.Equals(sconn.State.ToString(), "Open"))
                         sconn.Close();
                     sconn.Open();                   

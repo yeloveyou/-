@@ -35,15 +35,36 @@ namespace 软件测试工程师管理系统
         {
             using (SqlConnection sconn = new SqlConnection(SConnStr.SConStr))
             {
-                if (!string.Equals(sconn.State.ToString(), "Open"))
+                try
                 {
-                    sconn.Open();
+                    if (!string.Equals(sconn.State.ToString(), "Open"))
+                    {
+                        sconn.Open();
+                    }
+                    scomm.Connection = sconn;
+                    if (textBox1.Text == "")
+                    {
+                        MessageBox.Show("请输入正确的工号");
+                        new 增加账号(textBox1.Text).Show();
+                        this.Hide();
+
+                    }
+                    else
+                    {
+                        scomm.CommandText = string.Format("insert into acnt values ('{0}','1',0,0)", textBox1.Text);
+                        scomm.ExecuteNonQuery();
+                        MessageBox.Show("创建成功！");
+                        sconn.Close();
+                    }
+                    
                 }
-                scomm.Connection = sconn;
-                scomm.CommandText = string.Format("insert into acnt values ('{0}','1',0,0)", textBox1.Text);
-                scomm.ExecuteNonQuery();
-                MessageBox.Show("创建成功！");
-                sconn.Close();
+                catch(Exception ex)
+                {
+                    MessageBox.Show("请输入不同的工号");
+                    new 增加账号(textBox1.Text).Show();
+                    this.Hide();
+                }
+                
             }
         }
 
