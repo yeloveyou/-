@@ -66,7 +66,7 @@ namespace 软件测试工程师管理系统
             
 
         }
-        bool issexok, isdegreeok, isphoneok;
+        bool issexok, isdegreeok, isphoneok,isnameok,isaddress,islocol,isworkage;
         public void panduan()
         {
             getDate();
@@ -93,6 +93,42 @@ namespace 软件测试工程师管理系统
             }
             else
                 isphoneok = false;
+            //判断输入名字
+            if (tbname.Text != ""&&tbname.Text.Length<50)
+            {
+                isnameok = true;
+            }
+            else
+                isnameok = false;
+            //判断地址
+            if (tbadress.Text.Length < 50)
+            {
+                isaddress = true;
+            }
+            else
+                isaddress = false;
+            //判断籍贯
+            if (tblocol.Text.Length < 50)
+            {
+                islocol = true;
+            }
+            else
+                islocol = false;
+            //判断工龄
+            try
+            {
+                if (Int32.Parse(tbworkage.Text) < 50 && Int32.Parse(tbworkage.Text) > 0)
+                {
+                    isworkage = true;
+                }
+                else
+                    isworkage = false;
+            }
+            catch(Exception e)
+            {                
+                isworkage = false;
+            }
+           
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -105,7 +141,7 @@ namespace 软件测试工程师管理系统
 
                 //输入的条件判断
                 panduan();
-                if (isdegreeok && issexok&&isphoneok)
+                if (isdegreeok && issexok&&isphoneok&&isnameok&&isaddress&&islocol&&isworkage)
                 {
                     scomm.CommandText = string.Format("update msg set msg_name='{0}',msg_sex='{1}',msg_birth='{2}',msg_native='{3}'," +
                       "msg_edu='{4}',msg_add='{5}',msg_tel='{6}',msg_year='{7}' where msg_num='{8}'", name, sex, birthday, local, degree, adress, phone, workage, tbnumber.Text);
@@ -116,19 +152,43 @@ namespace 软件测试工程师管理系统
                 }
                 else if (!isdegreeok)
                 {
-                    MessageBox.Show("请输入正确的学位如“本科”“小学”“中学”“专科”“硕士”“博士”“其他”");
+                    MessageBox.Show("重新输入！请输入正确的学位如“本科”“小学”“中学”“专科”“硕士”“博士”“其他”");
                     new 员工资料补充(tbnumber.Text).Show();
                     this.Hide();
                 }
                 else if (!issexok)
                 {
-                    MessageBox.Show("请输入性别“男”或者“女”");                   
+                    MessageBox.Show("重新输入！请输入性别“男”或者“女”");                   
                     new 员工资料补充(tbnumber.Text).Show();
                     this.Hide();
                 }
                 else if (!isphoneok)
                 {
-                    MessageBox.Show("请输入正确的手机号码！");
+                    MessageBox.Show("重新输入！请输入正确的手机号码！");
+                    new 员工资料补充(tbnumber.Text).Show();
+                    this.Hide();
+                }
+                else if (!isnameok)
+                {
+                    MessageBox.Show("重新输入！请输入你的名字！");
+                    new 员工资料补充(tbnumber.Text).Show();
+                    this.Hide();
+                }
+                else if (!isaddress)
+                {
+                    MessageBox.Show("重新输入！请输入正确的地址！(不超过50字符)");
+                    new 员工资料补充(tbnumber.Text).Show();
+                    this.Hide();
+                }
+                else if (!islocol)
+                {
+                    MessageBox.Show("重新输入！请输入正确的籍贯！(不超过50字符)");
+                    new 员工资料补充(tbnumber.Text).Show();
+                    this.Hide();
+                }
+                else if (!isworkage)
+                {
+                    MessageBox.Show("重新输入！请输入正确的工龄（0-50）！");
                     new 员工资料补充(tbnumber.Text).Show();
                     this.Hide();
                 }
