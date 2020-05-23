@@ -50,6 +50,8 @@
             this.lbnumber = new System.Windows.Forms.Label();
             this.dgv用户 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv用户)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +59,7 @@
             // 
             this.tbsalary.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbsalary.Location = new System.Drawing.Point(411, 159);
-            this.tbsalary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbsalary.Margin = new System.Windows.Forms.Padding(2);
             this.tbsalary.Name = "tbsalary";
             this.tbsalary.ReadOnly = true;
             this.tbsalary.Size = new System.Drawing.Size(76, 26);
@@ -78,7 +80,7 @@
             // 
             this.tbworkage.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbworkage.Location = new System.Drawing.Point(141, 162);
-            this.tbworkage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbworkage.Margin = new System.Windows.Forms.Padding(2);
             this.tbworkage.Name = "tbworkage";
             this.tbworkage.ReadOnly = true;
             this.tbworkage.Size = new System.Drawing.Size(76, 26);
@@ -99,7 +101,7 @@
             // 
             this.tbphone.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbphone.Location = new System.Drawing.Point(411, 130);
-            this.tbphone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbphone.Margin = new System.Windows.Forms.Padding(2);
             this.tbphone.Name = "tbphone";
             this.tbphone.ReadOnly = true;
             this.tbphone.Size = new System.Drawing.Size(76, 26);
@@ -120,7 +122,7 @@
             // 
             this.tbadress.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbadress.Location = new System.Drawing.Point(141, 130);
-            this.tbadress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbadress.Margin = new System.Windows.Forms.Padding(2);
             this.tbadress.Name = "tbadress";
             this.tbadress.ReadOnly = true;
             this.tbadress.Size = new System.Drawing.Size(76, 26);
@@ -141,7 +143,7 @@
             // 
             this.tbdegree.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbdegree.Location = new System.Drawing.Point(411, 95);
-            this.tbdegree.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbdegree.Margin = new System.Windows.Forms.Padding(2);
             this.tbdegree.Name = "tbdegree";
             this.tbdegree.ReadOnly = true;
             this.tbdegree.Size = new System.Drawing.Size(76, 26);
@@ -162,7 +164,7 @@
             // 
             this.tblocol.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tblocol.Location = new System.Drawing.Point(141, 95);
-            this.tblocol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tblocol.Margin = new System.Windows.Forms.Padding(2);
             this.tblocol.Name = "tblocol";
             this.tblocol.ReadOnly = true;
             this.tblocol.Size = new System.Drawing.Size(76, 26);
@@ -183,7 +185,7 @@
             // 
             this.tbbirthday.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbbirthday.Location = new System.Drawing.Point(411, 63);
-            this.tbbirthday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbbirthday.Margin = new System.Windows.Forms.Padding(2);
             this.tbbirthday.Name = "tbbirthday";
             this.tbbirthday.ReadOnly = true;
             this.tbbirthday.Size = new System.Drawing.Size(76, 26);
@@ -204,7 +206,7 @@
             // 
             this.tbsex.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbsex.Location = new System.Drawing.Point(141, 63);
-            this.tbsex.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbsex.Margin = new System.Windows.Forms.Padding(2);
             this.tbsex.Name = "tbsex";
             this.tbsex.ReadOnly = true;
             this.tbsex.Size = new System.Drawing.Size(76, 26);
@@ -225,7 +227,7 @@
             // 
             this.tbname.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbname.Location = new System.Drawing.Point(411, 30);
-            this.tbname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbname.Margin = new System.Windows.Forms.Padding(2);
             this.tbname.Name = "tbname";
             this.tbname.ReadOnly = true;
             this.tbname.Size = new System.Drawing.Size(76, 26);
@@ -246,7 +248,7 @@
             // 
             this.tbnumber.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbnumber.Location = new System.Drawing.Point(141, 30);
-            this.tbnumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbnumber.Margin = new System.Windows.Forms.Padding(2);
             this.tbnumber.Name = "tbnumber";
             this.tbnumber.ReadOnly = true;
             this.tbnumber.Size = new System.Drawing.Size(76, 26);
@@ -268,8 +270,8 @@
             this.dgv用户.AllowUserToAddRows = false;
             this.dgv用户.AllowUserToDeleteRows = false;
             this.dgv用户.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv用户.Location = new System.Drawing.Point(22, 207);
-            this.dgv用户.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv用户.Location = new System.Drawing.Point(22, 235);
+            this.dgv用户.Margin = new System.Windows.Forms.Padding(2);
             this.dgv用户.MultiSelect = false;
             this.dgv用户.Name = "dgv用户";
             this.dgv用户.ReadOnly = true;
@@ -282,17 +284,41 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(22, 10);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(12, 21);
             this.textBox1.TabIndex = 61;
             this.textBox1.Visible = false;
             // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox2.Location = new System.Drawing.Point(141, 195);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(76, 26);
+            this.textBox2.TabIndex = 63;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(65, 198);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 16);
+            this.label1.TabIndex = 62;
+            this.label1.Text = "修改次数";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // 所有员工资料
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 360);
+            this.ClientSize = new System.Drawing.Size(618, 389);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dgv用户);
             this.Controls.Add(this.tbsalary);
@@ -315,7 +341,7 @@
             this.Controls.Add(this.lbname);
             this.Controls.Add(this.tbnumber);
             this.Controls.Add(this.lbnumber);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "所有员工资料";
             this.Text = "所有员工资料";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.所有员工资料_FormClosed);
@@ -350,5 +376,7 @@
         private System.Windows.Forms.Label lbnumber;
         private System.Windows.Forms.DataGridView dgv用户;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label1;
     }
 }

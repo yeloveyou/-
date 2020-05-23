@@ -74,6 +74,34 @@ namespace 软件测试工程师管理系统
             tbphone.Text = dgv用户.CurrentRow.Cells[7].Value.ToString();
             tbworkage.Text = dgv用户.CurrentRow.Cells[8].Value.ToString();
             tbsalary.Text = dgv用户.CurrentRow.Cells[9].Value.ToString();
+            using (SqlConnection sconn = new SqlConnection(SConnStr.SConStr))
+            {
+                if (!string.Equals(sconn.State.ToString(), "Open"))
+                    sconn.Open();
+                scomm.Connection = sconn;
+                scomm.CommandText = string.Format("select acnt_updatetimes from acnt where msg_num ='{0}'",tbnumber.Text);
+                sdreader = scomm.ExecuteReader();
+                if (sdreader.Read())
+                {
+                    try
+                    {
+                        string time = sdreader.GetInt32(sdreader.GetOrdinal("acnt_updatetimes")).ToString();
+                        textBox2.Text = time;
+                    }
+                    catch(Exception ex)
+                    {
+                        string time = "0";
+                        textBox2.Text = time;
+                    }
+                    
+                }
+                sconn.Close();
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
