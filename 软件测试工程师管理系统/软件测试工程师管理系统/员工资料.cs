@@ -122,7 +122,7 @@ namespace 软件测试工程师管理系统
 
 
         }
-        bool issexok, isdegreeok,isphoneok,isbirthday;
+        bool issexok, isdegreeok, isphoneok, isnameok, isaddress, islocol, isworkage;
         public void panduan()
         {
             getDate();
@@ -143,14 +143,48 @@ namespace 软件测试工程师管理系统
                 isdegreeok = false;
 
             //判断电话号码输入
-            if (phone.Length == 11&&(phone.Substring(0,3)=="173"|| phone.Substring(0, 3) == "150"|| phone.Substring(0, 3) == "137"))
+            if (phone.Length == 11 && (phone.Substring(0, 3) == "173" || phone.Substring(0, 3) == "150" || phone.Substring(0, 3) == "137" || phone.Substring(0, 3) == "139" || phone.Substring(0, 3) == "156" || phone.Substring(0, 3) == "178" || phone.Substring(0, 3) == "130" || phone.Substring(0, 3) == "189" || phone.Substring(0, 3) == "155"))
             {
                 isphoneok = true;
             }
             else
                 isphoneok = false;
-          
-      
+            //判断输入名字
+            if (tbname.Text != "" && tbname.Text.Length < 50)
+            {
+                isnameok = true;
+            }
+            else
+                isnameok = false;
+            //判断地址
+            if (tbadress.Text.Length < 50)
+            {
+                isaddress = true;
+            }
+            else
+                isaddress = false;
+            //判断籍贯
+            if (tblocol.Text.Length < 50)
+            {
+                islocol = true;
+            }
+            else
+                islocol = false;
+            //判断工龄
+            try
+            {
+                if (Int32.Parse(tbworkage.Text) < 50 && Int32.Parse(tbworkage.Text) > 0)
+                {
+                    isworkage = true;
+                }
+                else
+                    isworkage = false;
+            }
+            catch (Exception e)
+            {
+                isworkage = false;
+            }
+
         }
         //修改信息
         private void button1_Click(object sender, EventArgs e)

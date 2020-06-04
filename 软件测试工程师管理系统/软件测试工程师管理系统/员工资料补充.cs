@@ -87,7 +87,7 @@ namespace 软件测试工程师管理系统
                 isdegreeok = false;
 
             //判断电话号码输入
-            if (phone.Length == 11 && (phone.Substring(0, 3) == "173" || phone.Substring(0, 3) == "150" || phone.Substring(0, 3) == "137"))
+            if (phone.Length == 11 && (phone.Substring(0, 3) == "173" || phone.Substring(0, 3) == "150" || phone.Substring(0, 3) == "137" || phone.Substring(0, 3) == "139" || phone.Substring(0, 3) == "156" || phone.Substring(0, 3) == "178" || phone.Substring(0, 3) == "130" || phone.Substring(0, 3) == "189" || phone.Substring(0, 3) == "155"))
             {
                 isphoneok = true;
             }

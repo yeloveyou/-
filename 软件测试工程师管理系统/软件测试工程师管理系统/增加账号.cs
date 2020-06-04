@@ -25,16 +25,19 @@ namespace 软件测试工程师管理系统
         {
             InitializeComponent();
         }
+        string zhanghao;
         public 增加账号(string adminname)
         {
             InitializeComponent();
             textBox2.Text = adminname;
+            zhanghao = adminname;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             using (SqlConnection sconn = new SqlConnection(SConnStr.SConStr))
             {
+
                 try
                 {
                     if (!string.Equals(sconn.State.ToString(), "Open"))
@@ -42,13 +45,16 @@ namespace 软件测试工程师管理系统
                         sconn.Open();
                     }
                     scomm.Connection = sconn;
-                    if (textBox1.Text == "")
+                    bool a;
+                    a = int.TryParse(textBox1.Text,out int b);
+                    if (textBox1.Text == ""||!a)
                     {
                         MessageBox.Show("请输入正确的工号");
+
                         new 增加账号(textBox1.Text).Show();
                         this.Hide();
 
-                    }
+                    }                
                     else
                     {
                         scomm.CommandText = string.Format("insert into acnt values ('{0}','1',0,0)", textBox1.Text);
@@ -60,7 +66,7 @@ namespace 软件测试工程师管理系统
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show("请输入不同的工号");
+                    MessageBox.Show("请输入正确的工号，不要重复和非法字符");
                     new 增加账号(textBox1.Text).Show();
                     this.Hide();
                 }
@@ -70,7 +76,7 @@ namespace 软件测试工程师管理系统
 
         private void 增加账号_FormClosed(object sender, FormClosedEventArgs e)
         {
-            new 管理员界面(textBox2.Text).Show();
+            new 管理员界面(zhanghao).Show();
             this.Hide();
         }
 
